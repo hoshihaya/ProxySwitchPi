@@ -2,6 +2,8 @@
 
 ProxySwitchPi for Chrome extentiion
 
+![ProxySwitchPi](images/ProxySwitchPi-settings.png)
+
 ## Installation Steps
 
 ### 1. Download the Source Code
