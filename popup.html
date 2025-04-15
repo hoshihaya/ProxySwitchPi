@@ -27,7 +27,7 @@
     }
     button {
       margin-top: 12px;
-      width: 100%;
+      width: 31%;
       padding: 10px;
       border: none;
       border-radius: 4px;
@@ -39,10 +39,51 @@
     button:hover {
       background-color: #0056b3;
     }
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      right: 0px;
+    }
+    .toggle-container input {
+      appearance: none;
+      width: 40px;
+      height: 20px;
+      background: #ccc;
+      border-radius: 20px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .toggle-container input:checked {
+      background: #4CAF50;
+    }
+    .toggle-container input::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 1px;
+      left: 2px;
+      transition: transform 0.3s;
+    }
+    .toggle-container input:checked::before {
+      transform: translateX(20px);
+    }
+    .toggle-container label {
+      margin-right: 10px;
+    }
   </style>
   <script src="popup.js" defer></script>
 </head>
 <body>
+  <div class="toggle-container">
+    <label for="toggleProxy">Enable Proxy:</label>
+    <input type="checkbox" id="toggleProxy">
+  </div>
+
   <label>Proxy Server (IP:Port only, no protocol):</label>
   <input type="text" id="proxy" placeholder="example.com:8080">
 
